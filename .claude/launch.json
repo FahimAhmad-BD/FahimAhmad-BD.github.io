@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "portfolio-v2",
+      "runtimeExecutable": "py",
+      "runtimeArgs": ["-m", "http.server", "7799", "--directory", "G:\\My Drive\\Portfolio Content - Copy\\website-v2"],
+      "port": 7799
+    }
+  ]
+}
