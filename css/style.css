@@ -1272,6 +1272,13 @@ body { overflow-x: hidden; }
   border-radius: 6px;
 }
 
+/* Credly profile link */
+.cert-card.credly-link {
+  text-decoration: none;
+  align-items: center;
+}
+.cert-card.credly-link .cert-name { color: var(--white); }
+
 /* SOLIDWORKS badge wall */
 .cert-card.sw-wall {
   flex-direction: column;
@@ -1285,7 +1292,7 @@ body { overflow-x: hidden; }
 
 .sw-badges {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
   gap: 16px;
   width: 100%;
 }
@@ -1319,6 +1326,7 @@ body { overflow-x: hidden; }
 
 .sw-badge-name {
   font-family: var(--font-mono);
+  line-height: 1.35;
   font-size: 0.72rem;
   font-weight: 600;
   color: var(--white);
@@ -1772,7 +1780,6 @@ body { overflow-x: hidden; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .certs-grid { grid-template-columns: repeat(2, 1fr); }
   .cert-card.cert-featured { grid-column: 1 / -1; }
-  .sw-badges { grid-template-columns: repeat(4, 1fr); }
   .js-two-col { grid-template-columns: 1fr; }
   .js-tech { max-width: 100%; }
   .interests-grid { grid-template-columns: repeat(2, 1fr); }
