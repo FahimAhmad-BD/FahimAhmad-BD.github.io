@@ -1256,6 +1256,81 @@ body { overflow-x: hidden; }
 
 .cert-body { display: flex; flex-direction: column; gap: 4px; }
 
+.cert-logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cert-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* SOLIDWORKS badge wall */
+.cert-card.sw-wall {
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+}
+
+.sw-wall-head { display: flex; flex-direction: column; gap: 6px; max-width: 760px; }
+.sw-wall-head .cert-name { font-size: 1.2rem; }
+.sw-wall-head .cert-issuer { line-height: 1.6; }
+
+.sw-badges {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.sw-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  border-radius: 14px;
+  background: var(--white-08);
+  border: 1px solid var(--glass-border);
+  text-align: center;
+  text-decoration: none;
+  transition: transform var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.sw-badge:hover {
+  transform: translateY(-3px);
+  border-color: var(--white-20);
+  background: rgba(255,255,255,0.1);
+}
+
+.sw-badge img {
+  width: 100%;
+  max-width: 108px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.sw-badge-name {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.04em;
+}
+
+.sw-badge-date {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--white-40);
+}
+
 .cert-status {
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -1697,6 +1772,7 @@ body { overflow-x: hidden; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
   .certs-grid { grid-template-columns: repeat(2, 1fr); }
   .cert-card.cert-featured { grid-column: 1 / -1; }
+  .sw-badges { grid-template-columns: repeat(4, 1fr); }
   .js-two-col { grid-template-columns: 1fr; }
   .js-tech { max-width: 100%; }
   .interests-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1765,6 +1841,8 @@ body { overflow-x: hidden; }
   .skills-grid { grid-template-columns: 1fr; }
   .certs-grid { grid-template-columns: 1fr; }
   .cert-card.cert-featured { grid-column: auto; }
+  .sw-badges { grid-template-columns: repeat(2, 1fr); }
+  .cert-card.sw-wall { padding: 24px 20px; }
 }
 
 @media (max-width: 600px) {
