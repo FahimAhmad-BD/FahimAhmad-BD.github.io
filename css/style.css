@@ -1271,12 +1271,17 @@ body { overflow-x: hidden; }
   object-fit: contain;
 }
 
-.cert-logo-placeholder {
+.cert-logo-placeholder i {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--white-08);
   border: 1px solid var(--glass-border);
-  border-radius: 50%;
+  border-radius: 12px;
   color: var(--white-60);
-  font-size: 1.4rem;
+  font-size: 1.1rem;
 }
 
 .cert-group-title {
